@@ -4,8 +4,9 @@ Script that returns information about an employee's TODO list progress
 using a REST API.
 """
 
-import requests
 import sys
+import requests
+
 
 if __name__ == "__main__":
     # Ensure an employee ID is provided
@@ -34,6 +35,9 @@ if __name__ == "__main__":
     number_of_done_tasks = len(done_tasks)
 
     # Display progress
-    print(f"Employee {employee_name} is done with tasks({number_of_done_tasks}/{total_tasks}):")
+    print(
+        f"Employee {employee_name} is done with tasks"
+        f"({number_of_done_tasks}/{total_tasks}):"
+    )
     for task in done_tasks:
         print(f"\t {task.get('title')}")
